@@ -49,7 +49,9 @@ module.exports = {
         cart: "cart@http://localhost:8083/remoteEntry.js",
         addToCart: "addToCart@http://localhost:8085/remoteEntry.js",
       },
-      exposes: {},
+      exposes: {
+        "./PDPContent": "./src/PDPContent.jsx",
+      },
       shared: {
         ...deps,
         react: {
