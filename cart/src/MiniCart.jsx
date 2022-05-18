@@ -18,7 +18,11 @@ export default function MiniCart() {
 
   return (
     <>
-      <span onClick={() => setShowCart(!showCart)} id="showcart_span">
+      <span
+        className="cursor-pointer"
+        onClick={() => setShowCart(!showCart)}
+        id="showcart_span"
+      >
         <i className="ri-shopping-cart-2-fill text-2xl" id="showcart"></i>
         {items.length}
       </span>
@@ -28,8 +32,8 @@ export default function MiniCart() {
             className="absolute p-5 border-4 border-blue-800 bg-white rounded-xl text-black"
             style={{
               width: 300,
-              top: "2rem",
-              left: -250,
+              top: "3rem",
+              right: 0,
             }}
           >
             <div

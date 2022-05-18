@@ -9,23 +9,26 @@ const CartContent = () => {
     []
   );
   return (
-    <div>
+    <div className="px-5">
       <>
-        <div className="my-10 grid grid-cols-4 gap-5">
+        <div className="">
           {items?.map((item) => (
-            <React.Fragment key={item.id}>
+            <div
+              className="my-10 grid grid-cols-4 gap-5 bg-white shadow-sm p-4"
+              key={item.id}
+            >
               <div>{item.quantity}</div>
               <img src={item.image} alt={item.name} className="max-h-6" />
               <div>{item.name}</div>
               <div className="text-right">
                 {currency.format(item.quantity * item.price)}
               </div>
-            </React.Fragment>
+            </div>
           ))}
           <div></div>
           <div></div>
           <div></div>
-          <div className="text-right" id="grand_total">
+          <div className="text-right mb-4" id="grand_total">
             {currency.format(
               items.reduce((a, v) => a + v.quantity * v.price, 0)
             )}
